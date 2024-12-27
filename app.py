@@ -73,8 +73,10 @@ def ask_chatbot(question, context):
         return f"Error in chatbot response: {e}"
 
 # Streamlit App
-st.title("LLM Translator and Real-Time Chatbot")
+st.title("Pathfinder AI")
 st.sidebar.title("Settings")
+st.subheader("Your Guide for Immigrants and Job Seekers Moving Abroad")
+
 
 # Language selection
 language_options = [
@@ -83,7 +85,8 @@ language_options = [
     ("French", "fr"),
     ("Chinese", "zh"),
     ("Danish", "da"),
-    ("Vietnamese", "vi")
+    ("Vietnamese", "vi"),
+    ("German", "de")
 ]
 target_language = st.sidebar.selectbox("Select Target Language", language_options, format_func=lambda x: x[0])
 
